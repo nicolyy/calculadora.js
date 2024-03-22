@@ -5,42 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
     <title>Calculadora</title>
 </head>
 <body>
     <div class="calculadora">
-        <div class="resultado">0</div>
+        <div class="resultado" id="visor"><span id="visorInfo"></span></div>
+        
         <div class="botoes">
-            <button class="btn-gray">C</button>
-            <button class="btn-gray">#</button>
-            <button class="btn-gray">%</button>
-            <button class="btn-orange">/</button>
+            <button class="btn-gray button operadores" value="C" onclick="calculadora.apagaUltimoDigito()">C</button>
+            <button class="btn-gray button operadores" value="#">#</button>
+            <button class="btn-gray button operadores" value="%">%</button>
+            <button class="btn-orange button operadores" value="/">/</button>
 
-            <button class="btn-ligth-gray">7</button>
-            <button class="btn-ligth-gray">8</button>
-            <button class="btn-ligth-gray">9</button>
-            <button class="btn-orange">*</button>
+            <button class="btn-ligth-gray button numeros" value="7">7</button>
+            <button class="btn-ligth-gray button numeros" value="8">8</button>
+            <button class="btn-ligth-gray button numeros" value="9">9</button>
+            <button class="btn-orange button operadores" value="*">*</button>
 
-            <button class="btn-ligth-gray">4</button>
-            <button class="btn-ligth-gray">5</button>
-            <button class="btn-ligth-gray">6</button>
-            <button class="btn-orange">-</button>
+            <button class="btn-ligth-gray button numeros" value="4">4</button>
+            <button class="btn-ligth-gray button numeros" value="5">5</button>
+            <button class="btn-ligth-gray button numeros" value="6">6</button>
+            <button class="btn-orange button operadores" value="-">-</button>
 
             
-            <button class="btn-ligth-gray">1</button>
-            <button class="btn-ligth-gray">2</button>
-            <button class="btn-ligth-gray">3</button>
-            <button class="btn-orange">+</button>
+            <button class="btn-ligth-gray button numeros" value="1">1</button>
+            <button class="btn-ligth-gray button numeros" value="2">2</button>
+            <button class="btn-ligth-gray button numeros" value="3">3</button>
+            <button class="btn-orange button operadores" value="+">+</button>
 
 
-            <button class="btn-ligth-gray button-zero">0</button>
-            <button class="btn-ligth-gray">,</button>
-            <button class="btn-orange">=</button>
-
-
+            <button class="button-ligar" onclick="calculadora.ligarCalculadora()">ON</button>  
+            <button class="btn-ligth-gray button-zero button numeros" value="0">0</button>
+            <button class="btn-ligth-gray button numeros" value=".">,</button>
+            <button class="btn-orange button-result" onclick="calculadora.handleOperacoes()">=</button>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
